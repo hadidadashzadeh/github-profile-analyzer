@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  github-profile-analyzer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: github_profile_analyzer
+    ports:
+      - "8501:8501"
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN:-}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    volumes:
+      - ./data:/app/data
+      - ./reports:/app/reports
+      - ./charts_output:/app/charts_output
+      - ./logs:/app/logs
+    restart: unless-stopped
