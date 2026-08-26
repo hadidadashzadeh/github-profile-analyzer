@@ -20,7 +20,7 @@ The app also has a **"Try Demo"** button in the sidebar that instantly runs a fu
 |---|---|
 | ![Compare](screenshots/compare.png) | ![PDF Report](screenshots/pdf_report.png) |
 
-> *(Placeholder images — replace the files in `/screenshots` with real screenshots from the live demo.)*
+> *( SOON! `/screenshots` )*
 
 ---
 
