@@ -2,6 +2,26 @@
 
 A production-ready, modular Python application for analyzing public GitHub developer profiles. It fetches repository data through the GitHub REST API, computes statistics with **Pandas/NumPy**, visualizes results with **Matplotlib**, calculates a composite **developer score**, exports a polished **PDF report**, stores analysis history in **SQLite**, and ships as an interactive **Streamlit** dashboard — fully containerized with **Docker**.
 
+### 🌐 Live Demo
+
+👉 **[https://hadidadashzadeh-gpa.streamlit.app](https://hadidadashzadeh-gpa.streamlit.app)**
+
+The app also has a **"Try Demo"** button in the sidebar that instantly runs a full analysis on the developer's own GitHub profile — no typing required.
+
+---
+
+## 🖼️ Screenshots
+
+| Dashboard | Charts |
+|---|---|
+| ![Dashboard](screenshots/dashboard.png) | ![Charts](screenshots/charts.png) |
+
+| Profile Comparison | PDF Report |
+|---|---|
+| ![Compare](screenshots/compare.png) | ![PDF Report](screenshots/pdf_report.png) |
+
+> *(Placeholder images — replace the files in `/screenshots` with real screenshots from the live demo.)*
+
 ---
 
 ## ✨ Features

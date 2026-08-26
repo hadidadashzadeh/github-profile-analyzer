@@ -29,6 +29,8 @@ from app.pdf_report import PDFReportGenerator
 
 logger = configure_logging(__name__)
 
+DEMO_USERNAME = "hadidadashzadeh"
+
 st.set_page_config(
     page_title="GitHub Profile Analyzer",
     page_icon="📊",
@@ -166,6 +168,12 @@ def main() -> None:
         username = st.text_input("GitHub username", placeholder="e.g. torvalds")
         analyze_clicked = st.button("Analyze", type="primary", use_container_width=True)
 
+        demo_clicked = st.button(
+            "🚀 Try Demo (Developer's GitHub)",
+            use_container_width=True,
+            help=f"Instantly run the analysis on the developer's own profile: {DEMO_USERNAME}",
+        )
+
         st.divider()
         page = st.radio("Navigate", ["Dashboard", "Compare Profiles", "History"])
 
@@ -173,7 +181,11 @@ def main() -> None:
         st.caption("Built with Python, Streamlit, Pandas, NumPy, Matplotlib & SQLite.")
 
     if page == "Dashboard":
-        if analyze_clicked and username:
+        if demo_clicked:
+            result = run_analysis(DEMO_USERNAME)
+            if result:
+                st.session_state["last_result"] = result
+        elif analyze_clicked and username:
             result = run_analysis(username)
             if result:
                 st.session_state["last_result"] = result
